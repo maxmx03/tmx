@@ -1,5 +1,11 @@
 # tmx
 
+## Installation
+
+```bash
+echo "source $HOME/path/to/tmx.sh" >> $HOME/.bashrc
+```
+
 ## Usage
 
 ```bash
