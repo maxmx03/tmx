@@ -37,7 +37,6 @@ function _tmx_newx {
       tmux send-keys -t $project "cd $root" C-m
       tmux send-keys -t $project "clear" C-m
 
-      # Extraindo as janelas
       mapfile -t windows < <(echo "$session" | jq -r '.windows[]')
 
       for window in "${windows[@]}"; do
