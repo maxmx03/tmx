@@ -49,3 +49,8 @@ tmx help
 ```bash
 pacman -S jq
 ```
+
+## Alternatives
+
+- [tmuxinator](https://github.com/tmuxinator/tmuxinator)
+- [tmuxp](https://github.com/tmux-python/tmuxp)
