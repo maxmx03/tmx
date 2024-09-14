@@ -9,25 +9,43 @@ echo "source $HOME/path/to/tmx.sh" >> $HOME/.bashrc
 ## Usage
 
 ```bash
-tmx save # save sessions
-tmx restore # restore all sessions
 tmx attach # attach session
-tmx list # list saved sessions ~/.cache/tmux-session
-tmx new # create new session
+tmx new session-name # create new session
+tmx newx config.json # create a more complex session
+tmx rm # remove session
+tmx help
+```
+
+### newx example
+
+```json
+{
+  "sessions": [
+    {
+      "name": "solarized",
+      "root": "~/github/solarized.nvim",
+      "windows": [
+        "nvim",
+        "docker compose up",
+        "styla -f ./stylua.toml ."
+      ]
+    },
+    {
+      "name": "docs",
+      "root": "~/github/milianor-docs",
+      "windows": [
+        "nvim",
+        "pnpm start"
+      ]
+    }
+  ]
+}
 ```
 
 ## Dependencies
 
-- [gum](https://github.com/charmbracelet/gum)
+- [jq](https://jqlang.github.io/jq/)
 
 ```bash
-# golang
-# $HOME/go/bin
-go install github.com/charmbracelet/gum@latest
-
-# btw
-pacman -S gum
-
-# macos
-brew install gum
+pacman -S jq
 ```
